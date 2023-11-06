@@ -1,0 +1,47 @@
+{
+  "name": "paretus-strapi-api",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "preinstall": "npx only-allow npm",
+    "prepare": "husky install",
+    "dev": "strapi dev",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "lint-staged": "lint-staged",
+    "eslint": "eslint \"**/*.{js,ts}\" --fix",
+    "prettier": "prettier \"**/*.{js,ts,json,md}\" --write",
+    "release": "npx bumpp --commit --tag --push"
+  },
+  "dependencies": {
+    "@strapi/plugin-documentation": "^4.15.0",
+    "@strapi/plugin-i18n": "4.15.0",
+    "@strapi/plugin-users-permissions": "4.15.0",
+    "@strapi/strapi": "4.15.0",
+    "better-sqlite3": "8.0.1",
+    "strapi-plugin-transformer": "^3.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^2.8.8"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix",
+    "*.{js,ts,json,md}": "prettier --write"
+  },
+  "strapi": {
+    "uuid": "4c0114a9-0c84-424c-8069-36f5327dd514"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
