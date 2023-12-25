@@ -1,26 +1,35 @@
 {
   "name": "paretus-strapi-api",
-  "private": true,
   "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
   "scripts": {
-    "preinstall": "npx only-allow npm",
-    "prepare": "husky install",
-    "dev": "strapi dev",
-    "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
-    "lint-staged": "lint-staged",
+    "dev": "strapi dev",
     "eslint": "eslint \"**/*.{js,ts}\" --fix",
+    "preinstall": "npx only-allow npm",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
     "prettier": "prettier \"**/*.{js,ts,json,md}\" --write",
-    "release": "npx bumpp --commit --tag --push"
+    "release": "npx bumpp --commit --tag --push",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix",
+    "*.{js,ts,json,md}": "prettier --write"
   },
   "dependencies": {
-    "@strapi/plugin-documentation": "^4.15.0",
-    "@strapi/plugin-i18n": "4.15.0",
-    "@strapi/plugin-users-permissions": "4.15.0",
-    "@strapi/strapi": "4.15.0",
+    "@strapi/plugin-documentation": "^4.16.2",
+    "@strapi/plugin-i18n": "4.16.2",
+    "@strapi/plugin-users-permissions": "4.16.2",
+    "@strapi/strapi": "4.16.2",
     "better-sqlite3": "8.0.1",
-    "strapi-plugin-transformer": "^3.1.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.4",
+    "strapi-plugin-transformer": "^3.1.0",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
@@ -32,16 +41,11 @@
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8"
   },
-  "lint-staged": {
-    "*.{js,ts}": "eslint --fix",
-    "*.{js,ts,json,md}": "prettier --write"
-  },
-  "strapi": {
-    "uuid": "4c0114a9-0c84-424c-8069-36f5327dd514"
-  },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "strapi": {
+    "uuid": "4c0114a9-0c84-424c-8069-36f5327dd514"
+  }
 }

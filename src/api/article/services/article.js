@@ -13,7 +13,6 @@ module.exports = createCoreService("api::article.article", ({ strapi }) => ({
       const updateParams = {
         data: { ...result, views: result.views + 1, user: { connect: [result.user.id] } },
       };
-      console.log(updateParams, "updateParams");
       await strapi.service("api::article.article").update(entityId, updateParams);
       return result;
     } catch (error) {
