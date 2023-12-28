@@ -46,6 +46,7 @@
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "4c0114a9-0c84-424c-8069-36f5327dd514"
+    "uuid": "4c0114a9-0c84-424c-8069-36f5327dd514",
+    "telemetryDisabled": true
   }
 }

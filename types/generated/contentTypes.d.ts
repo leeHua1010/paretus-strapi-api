@@ -662,7 +662,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       "oneToMany",
       "api::article.article"
     >;
-    motto: Attribute.String;
+    avatar: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<"plugin::users-permissions.user", "oneToOne", "admin::user"> &
